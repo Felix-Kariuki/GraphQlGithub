@@ -1,0 +1,30 @@
+query GetUserProfileQuery($login:String!){
+    repositoryOwner(login: $login) {
+        ... on User {
+            avatarUrl
+            name
+            login
+            bio
+            twitterUsername
+            websiteUrl
+            following(first: 10) {
+                totalCount
+            }
+            followers(first: 10) {
+                totalCount
+            }
+            email
+            location
+
+            repositories(first: 10) {  # Added to fetch repositories
+                totalCount
+            }
+            organizations(first: 10) {  # Added to fetch organizations
+                totalCount
+            }
+            starredRepositories(first:10) {
+                totalCount
+            }
+        }
+    }
+}

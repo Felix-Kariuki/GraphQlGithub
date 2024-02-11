@@ -1,0 +1,13 @@
+query GetFollowingQuery($username: String!) {
+    user(login: $username) {
+        following(first: 100) {
+            totalCount
+            nodes {
+                name
+                login
+                bio
+                avatarUrl
+            }
+        }
+    }
+}

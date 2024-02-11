@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GithubGraphQl</string>
+    <string name="profile_image">Profile Image</string>
+</resources>

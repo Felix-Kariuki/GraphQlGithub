@@ -1,0 +1,42 @@
+dependencies {
+    implementation(libs.core.ktx)
+
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.activity.compose)
+    implementation(platform(libs.compose.bom))
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.material3)
+    implementation(libs.material.icons)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.ui.test.junit4)
+    debugImplementation(libs.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
+
+    implementation(libs.timber)
+
+    implementation(libs.coil.compose)
+
+    api(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation(libs.moshi)
+
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.mockk.agent)
+
+    api(libs.coroutines.test)
+    api(libs.coroutines.core)
+    api(libs.androidx.arch.core.testing)
+
+    testImplementation(libs.androidx.arch.core.testing)
+
+    testImplementation(libs.turbine)
+    testImplementation(libs.google.truth)
+}

@@ -1,0 +1,93 @@
+[versions]
+
+agp = "8.2.2"
+apolloRuntime = "3.7.3"
+kotlin = "1.9.22"
+core-ktx = "1.12.0"
+ksp = "1.9.22-1.0.17"
+ktlint = "11.6.1"
+spotlessPlugin = "6.25.0"
+hiltCompiler = "2.48"
+hiltNavigationCompose = "1.1.0"
+compose-bom = "2023.10.01"
+constraintlayoutCompose = "1.0.1"
+lifecycle-runtime-ktx = "2.7.0"
+activity-compose = "1.8.2"
+
+coilCompose = "2.5.0"
+mockkAndroid = "1.13.9"
+mockkAgent = "1.13.9"
+moshi = "1.15.0"
+timber = "5.0.1"
+
+turbine = "1.0.0"
+kotlinxCoroutines = "1.7.3"
+googleTruth = "1.3.0"
+archCore = "2.2.0"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+javax = "1"
+
+
+app_version_code = "1"
+jvm_target = "17"
+kotlin_compiler_version = "1.5.9"
+appcompat = "1.6.1"
+material = "1.11.0"
+org-jetbrains-kotlin-jvm = "1.9.22"
+
+[libraries]
+
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle-runtime-ktx" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle-runtime-ktx" }
+apollo-runtime = { module = "com.apollographql.apollo3:apollo-runtime", version.ref = "apolloRuntime" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkAndroid" }
+mockk-agent = { module = "io.mockk:mockk-agent", version.ref = "mockkAgent" }
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+ui = { group = "androidx.compose.ui", name = "ui" }
+ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+
+material3 = { group = "androidx.compose.material3", name = "material3" }
+material3-window-size = { group = "androidx.compose.material3", name = "material3-window-size-class" }
+material-icons = { group = "androidx.compose.material", name = "material-icons-extended" }
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
+
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltCompiler" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
+
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+
+ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+google-truth = { module = "com.google.truth:truth", version.ref = "googleTruth" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+androidx-arch-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "archCore" }
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+javax = { module = "javax.inject:javax.inject", version.ref = "javax" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ktlintPlugin = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+kspPlugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+daggerHilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltCompiler" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
+spotless = { id ="com.diffplug.spotless" , version.ref = "spotlessPlugin"}

@@ -1,0 +1,15 @@
+query GetRepositoriesQuery( $visibility: RepositoryVisibility, $last: Int) {
+    viewer {
+        name
+        repositories(visibility: $visibility, last: $last, ) {
+            nodes {
+                name
+                pushedAt
+                description
+                stargazers {
+                    totalCount
+                }
+            }
+        }
+    }
+}
