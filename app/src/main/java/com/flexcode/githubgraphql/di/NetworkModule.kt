@@ -39,7 +39,7 @@ import javax.inject.Singleton
 object NetworkModule {
 
     private const val BASE_URL = "https://api.github.com/graphql"
-    const val token = "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"
+    const val token = ""
 
     private fun createOkHttpClient(token: String): OkHttpClient {
         return OkHttpClient.Builder()
