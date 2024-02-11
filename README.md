@@ -8,10 +8,25 @@ nothing more, makes it easier to evolve APIs over time, and enables powerful dev
 
 ## Use
 In the NetworkModule replace the Token with your github token
-```
+``` kotlin
 
  private const val BASE_URL = "https://api.github.com/graphql"
  private const val token = "GITHUB_TOKEN_HERE"
+
+```
+
+## Project setup
+The Github Qraph Ql schema file and the Queries are already set up. you can find them here:
+```
+data/src/main/graphql/com/flexcode
+```
+
+You can create the ``schema.graphqls`` your self by using the gradlew task command as shown.
+Run it on you terminal. Replace the token with your own token.
+
+``` gradle
+
+ ./gradlew :app:downloadApolloSchema --endpoint='https://api.github.com/graphql' --schema=app/data/src/main/graphql/com/flexcode/schema.graphqls --header="Authorization: Bearer GITHUB_TOKEN_HERE"
 
 ```
 
@@ -21,6 +36,11 @@ In the NetworkModule replace the Token with your github token
 [Apollo Kotlin](https://www.apollographql.com/docs/kotlin/)
 
 [GraphQl](https://graphql.org/)
+
+
+[GraphQl Plugin](https://plugins.jetbrains.com/plugin/20645-apollo-graphql)
+
+[GraphQl Explorer](https://studio.apollographql.com/public/github/variant/current/explorer)
 
 ## **Screenshots 📷**
 | | | |
