@@ -27,11 +27,11 @@ import com.apollographql.apollo3.ApolloClient
 import com.flexcode.GetUserProfileQuery
 import com.flexcode.domain.utils.Dispatcher
 import com.flexcode.domain.utils.DispatcherProvider
-import com.flexcode.graphql.data.mappers.toGithubUser
-import com.flexcode.graphql.data.remote.flowSafeCall
 import com.flexcode.githubgraphql.domain.models.GithubUser
 import com.flexcode.githubgraphql.domain.repositories.GetGithubUserRepository
 import com.flexcode.githubgraphql.domain.utils.ResultWrapper
+import com.flexcode.graphql.data.mappers.toGithubUser
+import com.flexcode.graphql.data.remote.flowSafeCall
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

@@ -28,11 +28,11 @@ import com.apollographql.apollo3.api.Optional
 import com.flexcode.GetRepositoriesQuery
 import com.flexcode.domain.utils.Dispatcher
 import com.flexcode.domain.utils.DispatcherProvider
-import com.flexcode.graphql.data.mappers.toRepositories
-import com.flexcode.graphql.data.remote.flowSafeCall
 import com.flexcode.githubgraphql.domain.models.GithubRepositories
 import com.flexcode.githubgraphql.domain.repositories.GetRepositoriesRepository
 import com.flexcode.githubgraphql.domain.utils.ResultWrapper
+import com.flexcode.graphql.data.mappers.toRepositories
+import com.flexcode.graphql.data.remote.flowSafeCall
 import com.flexcode.type.RepositoryVisibility
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow

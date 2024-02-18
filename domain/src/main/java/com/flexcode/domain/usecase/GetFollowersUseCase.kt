@@ -23,8 +23,8 @@
  */
 package com.flexcode.githubgraphql.domain.usecase
 
-import com.flexcode.githubgraphql.domain.models.GithubFollowers
 import com.flexcode.domain.repositories.GetFollowersRepository
+import com.flexcode.githubgraphql.domain.models.GithubFollowers
 import com.flexcode.githubgraphql.domain.utils.ResultWrapper
 import kotlinx.coroutines.flow.Flow
 

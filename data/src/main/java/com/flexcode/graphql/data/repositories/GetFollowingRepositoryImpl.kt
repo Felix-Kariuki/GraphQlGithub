@@ -27,11 +27,11 @@ import com.apollographql.apollo3.ApolloClient
 import com.flexcode.GetFollowingQuery
 import com.flexcode.domain.utils.Dispatcher
 import com.flexcode.domain.utils.DispatcherProvider
-import com.flexcode.graphql.data.mappers.toFollowing
-import com.flexcode.graphql.data.remote.flowSafeCall
 import com.flexcode.githubgraphql.domain.models.GithubFollowers
 import com.flexcode.githubgraphql.domain.repositories.GetFollowingRepository
 import com.flexcode.githubgraphql.domain.utils.ResultWrapper
+import com.flexcode.graphql.data.mappers.toFollowing
+import com.flexcode.graphql.data.remote.flowSafeCall
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

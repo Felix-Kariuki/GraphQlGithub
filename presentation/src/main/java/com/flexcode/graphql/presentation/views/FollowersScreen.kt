@@ -43,11 +43,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.flexcode.githubgraphql.domain.models.SingleFollower
 import com.flexcode.graphql.designsystem.compossables.GithubText
 import com.flexcode.graphql.designsystem.previews.GithubPreviews
 import com.flexcode.graphql.designsystem.theme.GithubGraphQlTheme
 import com.flexcode.graphql.designsystem.theme.spacing
-import com.flexcode.githubgraphql.domain.models.SingleFollower
 import com.flexcode.graphql.presentation.components.FollowersComponent
 import com.flexcode.graphql.presentation.state.GithubState
 

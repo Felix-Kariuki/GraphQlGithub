@@ -49,6 +49,7 @@ fun GithubText(
         fontSize = fontSize,
         color = textColor,
         maxLines = maxLines,
+        modifier = modifier,
     )
 }
 

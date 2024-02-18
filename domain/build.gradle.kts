@@ -9,7 +9,11 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-dependencies{
+kotlin {
+    jvmToolchain(17)
+}
+
+dependencies {
     implementation(libs.coroutines.core)
     implementation(libs.javax)
 }

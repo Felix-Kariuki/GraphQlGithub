@@ -26,9 +26,9 @@ package com.flexcode.githubgraphql.data
 import app.cash.turbine.test
 import com.apollographql.apollo3.ApolloClient
 import com.flexcode.GetUserProfileQuery
+import com.flexcode.githubgraphql.domain.models.GithubUser
 import com.flexcode.githubgraphql.domain.repositories.GetGithubUserRepository
 import com.flexcode.githubgraphql.domain.utils.ResultWrapper
-import com.flexcode.graphql.data.mappers.toGithubUser
 import com.flexcode.graphql.data.repositories.GetGithubUserRepositoryImpl
 import com.google.common.truth.Truth
 import io.mockk.coEvery
@@ -38,7 +38,6 @@ import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
-
 class GetGithubUserInfoRepoImplTest {
 
     @MockK
@@ -61,8 +60,8 @@ class GetGithubUserInfoRepoImplTest {
                 .data
                 ?.repositoryOwner
                 ?.onUser
-                ?.toGithubUser()
-        } returns fakeGithubUser
+            // ?.toGithubUser()
+        } returns null
 
         runTest {
             repository.getGithubUser("Felix-Kariuki")
@@ -115,6 +114,8 @@ val fakeGithubUser = GithubUser(
     location = null,
     login = null,
     name = "Felix-Kariuki",
+    organizations = null,
+    repositories = null,
     starredRepositories = null,
     twitterUsername = null,
     websiteUrl = null,

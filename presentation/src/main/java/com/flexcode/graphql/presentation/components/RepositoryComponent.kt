@@ -44,12 +44,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.flexcode.githubgraphql.domain.models.GithubCount
+import com.flexcode.githubgraphql.domain.models.SingleRepository
 import com.flexcode.graphql.designsystem.compossables.GithubText
 import com.flexcode.graphql.designsystem.previews.GithubPreviews
 import com.flexcode.graphql.designsystem.theme.GithubGraphQlTheme
 import com.flexcode.graphql.designsystem.theme.spacing
-import com.flexcode.githubgraphql.domain.models.GithubCount
-import com.flexcode.githubgraphql.domain.models.SingleRepository
 import com.flexcode.graphql.designsystem.R.drawable as AppDrawable
 
 @Composable

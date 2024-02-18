@@ -23,7 +23,6 @@
  */
 package com.flexcode.graphql.data.mappers
 
-
 import com.flexcode.GetFollowersQuery
 import com.flexcode.GetFollowingQuery
 import com.flexcode.GetRepositoriesQuery

@@ -5,7 +5,6 @@ plugins {
     id("com.apollographql.apollo3").version("3.7.3")
     alias(libs.plugins.daggerHilt)
     alias(libs.plugins.kspPlugin)
-
 }
 
 apollo {
@@ -21,8 +20,6 @@ android {
         buildConfig = true
     }
 
-
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -32,16 +29,13 @@ android {
     }
 }
 
-
-dependencies{
+dependencies {
     implementation(project(":domain"))
 
     implementation(libs.apollo.runtime)
-
 
     api(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
     implementation(libs.moshi)
-
 }

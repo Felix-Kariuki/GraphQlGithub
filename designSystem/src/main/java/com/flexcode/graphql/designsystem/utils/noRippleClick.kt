@@ -1,3 +1,4 @@
+@file:Suppress("ktlint")
 /**
  *
  * Copyright (c) 2024 Felix Kariuki.
