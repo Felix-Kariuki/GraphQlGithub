@@ -1,17 +1,32 @@
 # Github GraphQl
-This is an github android application clone that uses [GraphQl](https://graphql.org/)
+This is a github android application clone that uses the github [GraphQl](https://graphql.org/) api using the [Apollo Kotlin](https://www.apollographql.com/docs/kotlin/) Graph Ql client
 
 [GraphQl](https://graphql.org/) -> GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. 
 GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and 
 nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
 
 
-## How to run
+## Use
 In the NetworkModule replace the Token with your github token
-```
+``` kotlin
 
  private const val BASE_URL = "https://api.github.com/graphql"
  private const val token = "GITHUB_TOKEN_HERE"
+
+```
+
+## Project setup
+The Github Qraph Ql schema file and the Queries are already set up. you can find them here:
+```
+data/src/main/graphql/com/flexcode
+```
+
+You can create the ``schema.graphqls`` your self by using the gradlew task command as shown.
+Run it on you terminal. Replace the token with your own token.
+
+``` gradle
+
+ ./gradlew :app:downloadApolloSchema --endpoint='https://api.github.com/graphql' --schema=app/data/src/main/graphql/com/flexcode/schema.graphqls --header="Authorization: Bearer GITHUB_TOKEN_HERE"
 
 ```
 
@@ -19,6 +34,13 @@ In the NetworkModule replace the Token with your github token
 [GithubGraphQl](https://docs.github.com/en/graphql) Api
 
 [Apollo Kotlin](https://www.apollographql.com/docs/kotlin/)
+
+[GraphQl](https://graphql.org/)
+
+
+[GraphQl Plugin](https://plugins.jetbrains.com/plugin/20645-apollo-graphql)
+
+[GraphQl Explorer](https://studio.apollographql.com/public/github/variant/current/explorer)
 
 ## **Screenshots 📷**
 | | | |
@@ -29,7 +51,7 @@ In the NetworkModule replace the Token with your github token
 
 
 ## **Tech stack & Libraries 🛠️👨‍💻**
-- [Apollo kotlin](https://www.apollographql.com/docs/kotlin/) - is a GraphQL client that generates Kotlin and Java models from GraphQL queries.
+- [Apollo kotlin](https://www.apollographql.com/docs/kotlin/) - A strongly-typed, caching GraphQL client for Java and Kotlin multiplatform and is a GraphQL client that generates Kotlin and Java models from GraphQL queries.
  - [Kotlin](https://kotlinlang.org/docs/reference/) - Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library, but type inference allows its syntax to be more concise
  * [Jetpack Components:](https://developer.android.com/topic/architecture?gclid=Cj0KCQjw8O-VBhCpARIsACMvVLOH1satX45o9f4PMQ4Sxr7bG9myl6-KZL9nYda8PJsHV7m2uJL8bzgaAmqiEALw_wcB&gclsrc=aw.ds)
     * [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=Cj0KCQjwhqaVBhCxARIsAHK1tiMMwHsxQ8Z25jyEdtLha9erq11wROoEfL6RqpGMprgbDTNuMO3_Ri8aAu5EEALw_wcB&gclsrc=aw.ds) -  Android’s modern toolkit for building native UI. It simplifies and accelerates UI development on Android
