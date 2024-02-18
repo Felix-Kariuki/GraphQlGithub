@@ -53,7 +53,7 @@ class GetGithubUserInfoRepoImplTest {
     }
 
     @Test
-    fun `test  loading state triggered first`() {
+    fun `test get user triggers loading state first`() {
         coEvery {
             apolloClient.query(GetUserProfileQuery("Felix-Kariuki"))
                 .execute()
