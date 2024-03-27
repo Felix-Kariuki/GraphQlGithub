@@ -25,6 +25,7 @@ package com.flexcode.githubgraphql.di
 
 import com.apollographql.apollo3.ApolloClient
 import com.apollographql.apollo3.network.okHttpClient
+import com.flexcode.githubgraphql.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,10 +40,10 @@ import javax.inject.Singleton
 object NetworkModule {
 
     /**
-     * TODO: move token to local.properties
+     * TODO: move token and url to local.properties
      */
-    private const val BASE_URL = "https://api.github.com/graphql"
-    const val token = "TOKEN_HERE"
+    private const val BASE_URL = BuildConfig.BASE_URL
+    const val token = BuildConfig.TOKEN
 
     private fun createOkHttpClient(token: String): OkHttpClient {
         return OkHttpClient.Builder()
