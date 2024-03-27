@@ -14,7 +14,7 @@ constraintlayoutCompose = "1.0.1"
 lifecycle-runtime-ktx = "2.7.0"
 activity-compose = "1.8.2"
 
-coilCompose = "2.5.0"
+coilCompose = "2.6.0"
 mockkAndroid = "1.13.9"
 mockkAgent = "1.13.9"
 moshi = "1.15.0"
