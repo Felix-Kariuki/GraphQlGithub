@@ -26,7 +26,6 @@ package com.flexcode.githubgraphql.data
 import app.cash.turbine.test
 import com.apollographql.apollo3.ApolloClient
 import com.flexcode.GetUserProfileQuery
-import com.flexcode.githubgraphql.domain.models.GithubUser
 import com.flexcode.githubgraphql.domain.repositories.GetGithubUserRepository
 import com.flexcode.githubgraphql.domain.utils.ResultWrapper
 import com.flexcode.graphql.data.repositories.GetGithubUserRepositoryImpl
@@ -34,16 +33,19 @@ import com.google.common.truth.Truth
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
 import io.mockk.mockk
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
+
 class GetGithubUserInfoRepoImplTest {
 
     @MockK
     val apolloClient = mockk<ApolloClient>()
     private lateinit var repository: GetGithubUserRepository
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Before
     fun setUp() {
         repository = GetGithubUserRepositoryImpl(
@@ -73,50 +75,4 @@ class GetGithubUserInfoRepoImplTest {
                 }
         }
     }
-
-//    @Test
-//    fun `test get git user returns correctly mapped data`() {
-//        coEvery {
-//            apolloClient.query(GetUserProfileQuery("Felix-Kariuki"))
-//                .execute()
-//                .data
-//                ?.repositoryOwner
-//                ?.onUser
-//                ?.toGithubUser()
-//        } returns fakeGithubUser
-//
-//
-//        runTest {
-//            val githubUser =
-//                apolloClient.query(GetUserProfileQuery("Felix-Kariuki"))
-//                    .execute()
-//                    .data
-//                    ?.repositoryOwner
-//                    ?.onUser
-//
-//            val result =
-//                repository.getGithubUser("Felix-Kariuki")
-//
-//            Truth.assertThat(result).isInstanceOf(ResultWrapper.Success::class.java)
-//
-//        }
-//
-//
-//    }
 }
-
-val fakeGithubUser = GithubUser(
-    avatarUrl = null,
-    bio = null,
-    email = null,
-    followers = null,
-    following = null,
-    location = null,
-    login = null,
-    name = "Felix-Kariuki",
-    organizations = null,
-    repositories = null,
-    starredRepositories = null,
-    twitterUsername = null,
-    websiteUrl = null,
-)

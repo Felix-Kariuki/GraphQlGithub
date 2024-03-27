@@ -38,6 +38,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -143,7 +144,7 @@ fun FollowersFollowing(
         )
 
         Row(
-            modifier = Modifier.noRippleClick { onFollowersClick() },
+            modifier = Modifier.noRippleClick { onFollowersClick() }.testTag("followers_text"),
         ) {
             GithubText(
                 text = followers,
@@ -159,7 +160,7 @@ fun FollowersFollowing(
         }
 
         Row(
-            modifier = Modifier.noRippleClick { onFollowingClick() },
+            modifier = Modifier.noRippleClick { onFollowingClick() }.testTag("following_text"),
         ) {
             GithubText(
                 text = following,

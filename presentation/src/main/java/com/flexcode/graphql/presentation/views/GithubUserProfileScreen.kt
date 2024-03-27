@@ -35,6 +35,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.flexcode.graphql.designsystem.previews.GithubPreviews
 import com.flexcode.graphql.designsystem.theme.GithubGraphQlTheme
@@ -56,7 +57,7 @@ fun GithubUserProfileScreen(
         modifier = modifier.fillMaxSize(),
     ) {
         if (state.isLoading) {
-            CircularProgressIndicator()
+            CircularProgressIndicator(modifier=modifier.testTag("profile_loader"))
         } else {
             LazyColumn(
                 modifier = modifier

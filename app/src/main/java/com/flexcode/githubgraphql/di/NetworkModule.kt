@@ -38,8 +38,11 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    /**
+     * TODO: move token to local.properties
+     */
     private const val BASE_URL = "https://api.github.com/graphql"
-    const val token = ""
+    const val token = "TOKEN_HERE"
 
     private fun createOkHttpClient(token: String): OkHttpClient {
         return OkHttpClient.Builder()
