@@ -76,6 +76,7 @@ Run it on you terminal. Replace the token with your own token.
  
  ## Testing
  <img src="./screenshots/test1.png"> 
+  <img src="./screenshots/test2.png"> 
 
  ## Architecture
 
