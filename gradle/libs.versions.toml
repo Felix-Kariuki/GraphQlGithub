@@ -35,7 +35,7 @@ jvm_target = "17"
 kotlin_compiler_version = "1.5.11"
 appcompat = "1.6.1"
 material = "1.11.0"
-org-jetbrains-kotlin-jvm = "1.9.22"
+org-jetbrains-kotlin-jvm = "1.9.23"
 
 [libraries]
 
