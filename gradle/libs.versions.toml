@@ -16,7 +16,7 @@ activity-compose = "1.8.2"
 
 coilCompose = "2.5.0"
 mockkAndroid = "1.13.9"
-mockkAgent = "1.13.9"
+mockkAgent = "1.13.10"
 moshi = "1.15.0"
 timber = "5.0.1"
 
