@@ -75,6 +75,7 @@ Run it on you terminal. Replace the token with your own token.
  * [Lottie Animation](https://lottiefiles.com/what-is-lottie) - A Lottie is a JSON-based animation file format that allows you to ship animations on any platform as easily as shipping static assets. 
  
  ## Testing
+ <img src="./screenshots/test1.png"> 
 
  ## Architecture
 
