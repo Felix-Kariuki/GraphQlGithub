@@ -57,7 +57,7 @@ fun GithubUserProfileScreen(
         modifier = modifier.fillMaxSize(),
     ) {
         if (state.isLoading) {
-            CircularProgressIndicator(modifier=modifier.testTag("profile_loader"))
+            CircularProgressIndicator(modifier = modifier.testTag("profile_loader"))
         } else {
             LazyColumn(
                 modifier = modifier

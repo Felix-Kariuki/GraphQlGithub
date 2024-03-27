@@ -20,8 +20,8 @@ class UserProfileScreenTests {
         rule.setContent {
             GithubUserProfileScreen(
                 onFollowersClick = { },
-                onFollowingClick = {  },
-                onSeeAllClick = {  },
+                onFollowingClick = { },
+                onSeeAllClick = { },
                 state = GithubState(isLoading = true),
             )
         }
@@ -39,7 +39,7 @@ class UserProfileScreenTests {
     @Test
     fun test_following_test_has_click_functions() {
         rule.setContent {
-            FollowersFollowing(followers = "", following = "", onFollowersClick = {  }) {}
+            FollowersFollowing(followers = "", following = "", onFollowersClick = { }) {}
         }
         rule.onNodeWithTag("following_text").assertHasClickAction()
     }
